@@ -510,12 +510,12 @@
     elements.floatingWhatsApp.addEventListener('click', shareOnWhatsApp);
 
     elements.shareFacebook.addEventListener('click', () => {
-        const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://https://christmaslovewish.netlify.app/')}&quote=${encodeURIComponent('🎄 Create beautiful Christmas love wishes! ❤️')}`;
+        const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://christmaslovewish.netlify.app/')}&quote=${encodeURIComponent('🎄 Create beautiful Christmas love wishes! ❤️')}`;
         window.open(url, '_blank');
     });
 
     elements.copyLink.addEventListener('click', () => {
-        const link = 'https://https://christmaslovewish.netlify.app';
+        const link = 'https://christmaslovewish.netlify.app';
         navigator.clipboard.writeText(link).then(() => {
             const originalHTML = elements.copyLink.innerHTML;
             elements.copyLink.innerHTML = '<i class="fas fa-check mr-2"></i> Copied!';
@@ -559,3 +559,4 @@
 </script>
 </body>
  </html>
+
