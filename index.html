@@ -1,0 +1,561 @@
+<!DOCTYPE html><html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Christmas Love Wish | Send Magical Xmas Wishes to Loved Ones</title> <meta name="description" content="Create and share beautiful, romantic, and funny Christmas love wishes for your girlfriend, boyfriend, wife, husband, or crush. Turn your feelings into a magical message."> <script src="https://cdn.tailwindcss.com"></script> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script> <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet"> <script> tailwind.config = { theme: { extend: { colors: { 'neon-red': '#ff2e63', 'emerald': '#0bda51', 'electric-gold': '#ffd700', 'deep-purple': '#7b2cbf', 'midnight': '#0f0c29', 'whatsapp-green': '#25D366', 'whatsapp-dark': '#075E54', }, fontFamily: { 'sans': ['Poppins', 'system-ui'], 'display': ['Playfair Display', 'serif'], 'whatsapp': ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'] }, animation: { 'float-slow': 'float 6s ease-in-out infinite', 'float-medium': 'float 4s ease-in-out infinite', 'pulse-glow': 'pulse-glow 2s ease-in-out infinite', 'fade-in': 'fadeIn 0.8s ease-out forwards', 'typewriter': 'typewriter 3s steps(40, end) 0.5s forwards', 'typing-dots': 'typing 1.5s infinite', 'heartbeat': 'heartbeat 1.2s ease-in-out infinite', 'seen-effect': 'seenEffect 2s ease-out forwards', 'pulse-strong': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite', }, keyframes: { float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-20px)' }, }, 'pulse-glow': { '0%, 100%': { opacity: 1, boxShadow: '0 0 20px #ff2e63' }, '50%': { opacity: 0.8, boxShadow: '0 0 40px #ff2e63' }, }, fadeIn: { from: { opacity: 0, transform: 'translateY(10px)' }, to: { opacity: 1, transform: 'translateY(0)' }, }, typewriter: { from: { width: '0' }, to: { width: '100%' }, }, typing: { '0%, 60%, 100%': { opacity: 0.4 }, '30%': { opacity: 1 }, }, heartbeat: { '0%, 100%': { transform: 'scale(1)' }, '50%': { transform: 'scale(1.1)' }, }, seenEffect: { '0%': { opacity: 0, transform: 'translateY(20px)' }, '100%': { opacity: 1, transform: 'translateY(0)' }, } }, backgroundImage: { 'christmas-gradient': 'linear-gradient(125deg, #0f0c29 0%, #7b2cbf 40%, #0bda51 80%, #ffd700 100%)', 'card-glass': 'linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)', 'heart-theme': 'radial-gradient(circle, rgba(255,46,99,0.1) 0%, transparent 70%)', 'sparkle-theme': 'radial-gradient(circle, rgba(255,215,0,0.1) 0%, transparent 70%)', 'faith-theme': 'radial-gradient(circle, rgba(123,44,191,0.1) 0%, transparent 70%)', } } } } </script> <style> body { overflow-x: hidden; font-family: 'Poppins', sans-serif; } .text-glow { text-shadow: 0 0 15px currentColor; } .glass-card { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.18); } .snowflake { position: absolute; background: white; border-radius: 50%; opacity: 0.8; filter: blur(0.5px); pointer-events: none; } .heart { position: absolute; color: #ff2e63; filter: drop-shadow(0 0 8px #ff2e63); z-index: 1; pointer-events: none; } .whatsapp-bubble { background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); border-radius: 24px 24px 4px 24px; position: relative; max-width: 85%; margin-left: auto; } .whatsapp-bubble::after { content: ''; position: absolute; bottom: 0; right: -8px; width: 20px; height: 20px; background: #25D366; clip-path: polygon(100% 0, 0 100%, 100% 100%); } .typing-indicator { display: inline-flex; align-items: center; gap: 4px; } .typing-dot { width: 8px; height: 8px; background: rgba(255, 255, 255, 0.7); border-radius: 50%; animation: typing 1.5s infinite; } .typing-dot:nth-child(2) { animation-delay: 0.2s; } .typing-dot:nth-child(3) { animation-delay: 0.4s; } @keyframes typing { 0%, 60%, 100% { opacity: 0.4; transform: translateY(0); } 30% { opacity: 1; transform: translateY(-5px); } } .theme-active { box-shadow: 0 0 0 3px currentColor, 0 0 20px currentColor; } #floatingWhatsApp { transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); z-index: 9999; } .share-count { background: linear-gradient(135deg, #ff2e63, #7b2cbf); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; } </style> </head> <body class="bg-midnight text-white font-sans min-h-screen relative overflow-x-hidden">
+	<!-- Animated Background Elements -->
+<div id="snowfall"></div>
+<div id="heartsContainer"></div>
+<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1512389142860-9c449e58a543?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80')] opacity-5 bg-cover bg-center bg-no-repeat"></div>
+<div class="absolute inset-0 bg-christmas-gradient opacity-30"></div>
+
+<!-- Audio Player -->
+<div class="fixed top-4 right-4 z-50 flex items-center gap-2">
+    <button id="musicToggle" class="glass-card p-3 rounded-full hover:bg-deep-purple transition-all duration-300 hover:scale-110">
+        <i class="fas fa-music text-electric-gold text-xl"></i>
+    </button>
+    <div class="text-sm glass-card px-3 py-1 rounded-full hidden" id="musicLabel">Romantic Piano</div>
+    <audio id="bgMusic">
+        <source src="https://assets.mixkit.co/music/preview/mixkit-christmas-is-here-875.mp3" type="audio/mpeg">
+    </audio>
+</div>
+
+<!-- Floating WhatsApp Button -->
+<button id="floatingWhatsApp" class="fixed bottom-6 right-6 z-50 hidden bg-whatsapp-green hover:bg-whatsapp-dark text-white font-bold text-lg py-4 px-6 rounded-2xl transition-all duration-300 shadow-2xl hover:shadow-whatsapp-green/50 animate-pulse-strong flex items-center">
+    <i class="fab fa-whatsapp text-2xl mr-3"></i> Share on WhatsApp
+</button>
+
+<!-- Hero Section -->
+<section class="relative z-10 container mx-auto px-4 pt-16 md:pt-24 text-center">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 animate-fade-in">
+            Send a <span class="text-neon-red text-glow">Magical Christmas Wish</span> <br class="hidden md:block"> to Someone You Love <span class="text-emerald">🎄❤️</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-200 mb-10 max-w-2xl mx-auto animate-fade-in" style="animation-delay: 0.2s;">
+            Turn your deepest feelings into a stunning, shareable Christmas message in seconds.
+        </p>
+        <div class="glass-card inline-block px-6 py-3 rounded-2xl mb-8">
+            <p class="text-lg"><span class="share-count font-bold" id="shareCount">1,243</span> Christmas wishes shared today</p>
+        </div>
+        <br>
+        <button id="scrollToGenerator" class="bg-neon-red hover:bg-deep-purple text-white font-bold text-xl md:text-2xl py-4 px-10 rounded-2xl transition-all duration-500 animate-pulse-glow shadow-2xl hover:shadow-purple-500/50 transform hover:-translate-y-2">
+            Create My Christmas Wish 💌
+        </button>
+    </div>
+</section>
+
+<!-- Wish Generator -->
+<section id="generator" class="relative z-10 container mx-auto px-4 py-16 md:py-24">
+    <div class="max-w-3xl mx-auto glass-card rounded-3xl p-6 md:p-10 shadow-2xl">
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-center mb-2 text-electric-gold">✨ Your Wish Generator</h2>
+        <p class="text-center text-gray-300 mb-10">Fill in the details and let the magic happen.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div>
+                <label class="block text-emerald mb-2 font-semibold"><i class="fas fa-user mr-2"></i>Your Name</label>
+                <input type="text" id="yourName" placeholder="e.g., Alex" class="w-full p-4 rounded-xl bg-gray-900/70 border border-emerald/50 focus:border-emerald focus:ring-2 focus:ring-emerald/30 outline-none transition">
+            </div>
+            <div>
+                <label class="block text-neon-red mb-2 font-semibold"><i class="fas fa-heart mr-2"></i>Loved One's Name</label>
+                <input type="text" id="lovedName" placeholder="e.g., Taylor" class="w-full p-4 rounded-xl bg-gray-900/70 border border-neon-red/50 focus:border-neon-red focus:ring-2 focus:ring-neon-red/30 outline-none transition">
+            </div>
+        </div>
+
+        <div class="mb-8">
+            <label class="block text-electric-gold mb-2 font-semibold"><i class="fas fa-users mr-2"></i>Relationship</label>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+                <button class="relationship-btn glass-card p-4 rounded-xl text-center hover:scale-105 transition-all duration-300" data-relation="girlfriend">Girlfriend ❤️</button>
+                <button class="relationship-btn glass-card p-4 rounded-xl text-center hover:scale-105 transition-all duration-300" data-relation="boyfriend">Boyfriend 💙</button>
+                <button class="relationship-btn glass-card p-4 rounded-xl text-center hover:scale-105 transition-all duration-300" data-relation="wife">Wife 💍</button>
+                <button class="relationship-btn glass-card p-4 rounded-xl text-center hover:scale-105 transition-all duration-300" data-relation="husband">Husband 👑</button>
+                <button class="relationship-btn glass-card p-4 rounded-xl text-center hover:scale-105 transition-all duration-300" data-relation="crush">Crush 🫶</button>
+            </div>
+            <input type="hidden" id="relationship" value="">
+        </div>
+
+        <div class="mb-8">
+            <label class="block text-deep-purple mb-2 font-semibold"><i class="fas fa-palette mr-2"></i>Message Theme</label>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <button class="theme-btn glass-card p-4 rounded-xl text-center hover:scale-105 transition-all duration-300" data-theme="christmas">
+                    <div class="text-2xl mb-1">🎄</div>
+                    <div>Christmas</div>
+                </button>
+                <button class="theme-btn glass-card p-4 rounded-xl text-center hover:scale-105 transition-all duration-300" data-theme="heart">
+                    <div class="text-2xl mb-1 animate-heartbeat">❤️</div>
+                    <div>Heart</div>
+                </button>
+                <button class="theme-btn glass-card p-4 rounded-xl text-center hover:scale-105 transition-all duration-300" data-theme="sparkle">
+                    <div class="text-2xl mb-1">✨</div>
+                    <div>Sparkle</div>
+                </button>
+                <button class="theme-btn glass-card p-4 rounded-xl text-center hover:scale-105 transition-all duration-300" data-theme="faith">
+                    <div class="text-2xl mb-1">🙏</div>
+                    <div>Faith</div>
+                </button>
+            </div>
+            <input type="hidden" id="messageTheme" value="christmas">
+        </div>
+
+        <div class="text-center">
+            <button id="generateBtn" class="bg-gradient-to-r from-emerald to-electric-gold hover:from-electric-gold hover:to-emerald text-gray-900 font-black text-2xl py-5 px-12 rounded-2xl transition-all duration-500 shadow-2xl hover:shadow-emerald/50 transform hover:-translate-y-1 hover:scale-105">
+                Generate My Christmas Message 🎁
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- WhatsApp Message Preview -->
+<section id="whatsappPreview" class="relative z-10 container mx-auto px-4 pb-8 hidden">
+    <div class="max-w-2xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-center mb-10 text-whatsapp-green">🔍 WhatsApp Message Preview</h2>
+        <div class="glass-card rounded-3xl p-6 md:p-8 shadow-2xl">
+            <div class="flex items-center gap-3 mb-4 p-3 bg-gray-900/50 rounded-2xl">
+                <div class="w-12 h-12 bg-whatsapp-green rounded-full flex items-center justify-center">
+                    <i class="fab fa-whatsapp text-2xl text-white"></i>
+                </div>
+                <div>
+                    <div class="font-bold">Christmas Love Wish</div>
+                    <div class="text-sm text-gray-300">Online • Just now</div>
+                </div>
+            </div>
+            
+            <div class="space-y-4 mb-6">
+                <div class="whatsapp-bubble p-5 text-white">
+                    <div id="previewContent" class="text-lg whitespace-pre-wrap"></div>
+                    <div class="flex justify-between items-center mt-3 pt-3 border-t border-white/20">
+                        <div class="text-sm opacity-80" id="messageTime">12:24 PM</div>
+                        <div class="flex items-center gap-1">
+                            <span class="text-lg">✓✓</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="typing-indicator glass-card p-4 rounded-2xl w-24" id="typingIndicator">
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                </div>
+            </div>
+            
+            <div class="flex justify-center gap-2 mt-4" id="reactions">
+                <!-- Reactions will be added by JS -->
+            </div>
+            
+            <div class="text-center mt-8">
+                <p class="text-gray-400 text-sm mb-4">This is exactly how your message will appear on WhatsApp</p>
+                <button id="previewShareBtn" class="bg-whatsapp-green hover:bg-whatsapp-dark text-white font-bold text-lg py-3 px-8 rounded-2xl transition-all duration-300 hover:scale-105 mr-3">
+                    <i class="fab fa-whatsapp mr-2"></i> Share Now
+                </button>
+                <button id="downloadImageBtn" class="bg-gradient-to-r from-deep-purple to-purple-800 hover:from-purple-800 hover:to-deep-purple text-white font-bold text-lg py-3 px-8 rounded-2xl transition-all duration-300 hover:scale-105">
+                    <i class="fas fa-image mr-2"></i> Save as Image
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Seen Effect -->
+<div id="seenEffect" class="fixed inset-0 z-50 flex items-center justify-center pointer-events-none hidden">
+    <div class="glass-card p-8 rounded-3xl text-center max-w-md animate-seen-effect">
+        <div class="text-5xl mb-4">👀</div>
+        <h3 class="text-2xl font-bold text-neon-red mb-2">Your message has been viewed with love!</h3>
+        <p class="text-gray-300">Spread more joy by sharing again ❤️</p>
+    </div>
+</div>
+
+<!-- Share Section -->
+<section id="share" class="relative z-10 container mx-auto px-4 pb-24 hidden">
+    <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-display font-bold mb-4 text-neon-red">Share the Magic! 🚀</h2>
+        <p class="text-xl text-gray-300 mb-10">Make their Christmas unforgettable. Share your wish instantly.</p>
+        <div class="flex flex-wrap justify-center gap-6">
+            <button id="shareWhatsApp" class="bg-gradient-to-r from-whatsapp-green to-green-500 hover:from-green-500 hover:to-whatsapp-green text-white font-bold text-lg py-4 px-8 rounded-2xl transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-emerald/50 flex items-center">
+                <i class="fab fa-whatsapp text-2xl mr-3"></i> Share on WhatsApp
+            </button>
+            <button id="shareFacebook" class="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-800 hover:to-blue-600 text-white font-bold text-lg py-4 px-8 rounded-2xl transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-blue-500/50 flex items-center">
+                <i class="fab fa-facebook-f text-2xl mr-3"></i> Share on Facebook
+            </button>
+            <button id="copyLink" class="bg-gradient-to-r from-deep-purple to-purple-800 hover:from-purple-800 hover:to-deep-purple text-white font-bold text-lg py-4 px-8 rounded-2xl transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/50 flex items-center">
+                <i class="fas fa-link text-2xl mr-3"></i> Copy Wish Link
+            </button>
+        </div>
+        <div class="mt-12 glass-card rounded-2xl p-6 max-w-2xl mx-auto">
+            <h3 class="text-xl font-bold text-electric-gold mb-4">💡 Pro Tip for Maximum Impact</h3>
+            <p class="text-gray-300 text-left">1. <span class="text-emerald">Share as Image</span> for WhatsApp Status (reaches all contacts!)<br>
+            2. <span class="text-neon-red">Use the preview</span> to see exactly how it looks<br>
+            3. <span class="text-electric-gold">Add personal details</span> to make it more special</p>
+        </div>
+    </div>
+</section>
+
+<footer class="relative z-10 text-center py-8 text-gray-500 text-sm border-t border-gray-800/50 mx-4">
+    <p>Made with <i class="fas fa-heart text-neon-red mx-1 animate-heartbeat"></i> for Christmas lovers everywhere. © 2023 Christmas Love Wish. All magic reserved.</p>
+</footer>
+
+<script>
+    // ========== STATE VARIABLES ==========
+    let currentMessage = '';
+    let decoratedMessage = '';
+    let currentTheme = 'christmas';
+    let shareCount = 1243;
+    let currentTime = new Date();
+    let musicPlaying = false;
+
+    // ========== DOM ELEMENTS ==========
+    const elements = {
+        musicToggle: document.getElementById('musicToggle'),
+        bgMusic: document.getElementById('bgMusic'),
+        musicLabel: document.getElementById('musicLabel'),
+        scrollToGenerator: document.getElementById('scrollToGenerator'),
+        generatorSection: document.getElementById('generator'),
+        previewSection: document.getElementById('whatsappPreview'),
+        shareSection: document.getElementById('share'),
+        shareCountEl: document.getElementById('shareCount'),
+        relationshipBtns: document.querySelectorAll('.relationship-btn'),
+        themeBtns: document.querySelectorAll('.theme-btn'),
+        generateBtn: document.getElementById('generateBtn'),
+        previewContent: document.getElementById('previewContent'),
+        messageTime: document.getElementById('messageTime'),
+        typingIndicator: document.getElementById('typingIndicator'),
+        reactions: document.getElementById('reactions'),
+        previewShareBtn: document.getElementById('previewShareBtn'),
+        downloadImageBtn: document.getElementById('downloadImageBtn'),
+        shareWhatsApp: document.getElementById('shareWhatsApp'),
+        shareFacebook: document.getElementById('shareFacebook'),
+        copyLink: document.getElementById('copyLink'),
+        floatingWhatsApp: document.getElementById('floatingWhatsApp'),
+        seenEffect: document.getElementById('seenEffect'),
+        yourNameInput: document.getElementById('yourName'),
+        lovedNameInput: document.getElementById('lovedName'),
+        relationshipInput: document.getElementById('relationship'),
+        messageThemeInput: document.getElementById('messageTheme')
+    };
+
+    // ========== MESSAGE TEMPLATES WITH THEME SUPPORT ==========
+    const messageTemplates = {
+        christmas: [
+            "🎄✨ *MERRY CHRISTMAS MY LOVE* ✨🎄\n\n❤️ My beautiful {lovedName} ❤️\nThis Christmas, I thank God for you.\nYou are my warmth in every cold season.\n\n🎁 From: {yourName}\n🔗 Create yours: christmaslovewish.com",
+            "🎅❤️ *CHRISTMAS BLESSINGS* ❤️🎅\n\nMy dear {lovedName},\nMay this Christmas fill our hearts with joy,\nAnd our home with love and laughter.\nYou are my greatest gift.\n\n🎄 With love, {yourName}\n✨ Spread love: christmaslovewish.com"
+        ],
+        heart: [
+            "❤️✨ *FROM MY HEART TO YOURS* ✨❤️\n\nMy dearest {lovedName},\nEvery beat of my heart whispers your name.\nThis Christmas, I give you my forever love.\n\n💝 Yours always, {yourName}\n🔗 Share love: christmaslovewish.com",
+            "💖🎄 *ALL MY LOVE THIS CHRISTMAS* 🎄💖\n\nTo {lovedName}, my everything\nMy love for you grows stronger each day\nLike an evergreen tree, forever green\n\n❤️ Forever yours, {yourName}\n🌟 Create yours: christmaslovewish.com"
+        ],
+        sparkle: [
+            "✨🎄 *SHINING JUST FOR YOU* 🎄✨\n\n{lov edName}, you light up my world\nBrighter than any Christmas star\nThis season and always, you're my magic\n\n🌟 With sparkles, {yourName}\n💫 Make magic: christmaslovewish.com",
+            "⭐❤️ *YOUR LIGHT IN MY LIFE* ❤️⭐\n\nMy shining star {lovedName},\nYou make every day sparkle with joy\nMerry Christmas to my favorite person\n\n✨ Love, {yourName}\n🎇 Share sparkle: christmaslovewish.com"
+        ],
+        faith: [
+            "🙏🎄 *GOD'S CHRISTMAS BLESSING* 🎄🙏\n\n{lov edName}, my blessed gift from above\nMay the peace of Christ fill your heart\nAnd our love reflect His eternal light\n\n✝️ In His love, {yourName}\n🕊️ Bless others: christmaslovewish.com",
+            "✝️❤️ *CHRIST-CENTERED CHRISTMAS* ❤️✝️\n\nMy beloved {lovedName},\nAs we celebrate Jesus' birth\nI celebrate the gift of you\nGod's perfect present to me\n\n🙏 Gratefully, {yourName}\n🌟 Share faith: christmaslovewish.com"
+        ]
+    };
+
+    // ========== EMOJI REACTIONS BY THEME ==========
+    const themeReactions = {
+        christmas: ['🎄', '❤️', '✨', '🎁', '⛄'],
+        heart: ['❤️', '💖', '💝', '💘', '🫶'],
+        sparkle: ['✨', '🌟', '⭐', '💫', '🎇'],
+        faith: ['🙏', '✝️', '🕊️', '🌟', '❤️']
+    };
+
+    // ========== MUSIC BY THEME ==========
+    const themeMusic = {
+        christmas: 'https://assets.mixkit.co/music/preview/mixkit-christmas-is-here-875.mp3',
+        heart: 'https://assets.mixkit.co/music/preview/mixkit-romantic-snow-535.mp3',
+        sparkle: 'https://assets.mixkit.co/music/preview/mixkit-fairy-dust-sound-3054.mp3',
+        faith: 'https://assets.mixkit.co/music/preview/mixkit-snowy-christmas-2370.mp3'
+    };
+
+    // ========== BACKGROUND ANIMATIONS ==========
+    function createSnow() {
+        const snowfall = document.getElementById('snowfall');
+        const snowCount = window.innerWidth < 768 ? 40 : 80;
+        
+        for (let i = 0; i < snowCount; i++) {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            const size = Math.random() * 5 + 3;
+            snowflake.style.width = `${size}px`;
+            snowflake.style.height = `${size}px`;
+            snowflake.style.left = `${Math.random() * 100}vw`;
+            snowflake.style.top = `-10px`;
+            snowflake.style.opacity = `${Math.random() * 0.7 + 0.3}`;
+            snowfall.appendChild(snowflake);
+            
+            // Animate each snowflake individually
+            animateSnowflake(snowflake);
+        }
+    }
+
+    function animateSnowflake(element) {
+        const duration = Math.random() * 10 + 10;
+        const horizontalDrift = Math.random() * 100 - 50;
+        
+        element.animate([
+            { transform: `translate(0, 0)`, opacity: element.style.opacity },
+            { transform: `translate(${horizontalDrift}px, 100vh)`, opacity: 0 }
+        ], {
+            duration: duration * 1000,
+            easing: 'linear',
+            iterations: Infinity,
+            delay: Math.random() * 5000
+        });
+    }
+
+    function createHearts() {
+        const container = document.getElementById('heartsContainer');
+        for (let i = 0; i < 15; i++) {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+            heart.style.fontSize = `${Math.random() * 20 + 15}px`;
+            heart.style.left = `${Math.random() * 100}vw`;
+            heart.style.top = `${Math.random() * 100}vh`;
+            container.appendChild(heart);
+            
+            // Float animation
+            heart.animate([
+                { transform: 'translateY(0)' },
+                { transform: 'translateY(-30px)' },
+                { transform: 'translateY(0)' }
+            ], {
+                duration: Math.random() * 6000 + 4000,
+                iterations: Infinity,
+                easing: 'ease-in-out',
+                delay: Math.random() * 2000
+            });
+        }
+    }
+
+    // ========== TIME FORMATTING ==========
+    function getCurrentTime() {
+        const now = new Date();
+        return now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    }
+
+    // ========== DECORATE MESSAGE ==========
+    function decorateMessage(template, yourName, lovedName, theme) {
+        let decorated = template
+            .replace(/{yourName}/g, yourName)
+            .replace(/{lovedName}/g, lovedName);
+            
+        // Add theme-specific decorations
+        switch(theme) {
+            case 'heart':
+                decorated = `💘 ${decorated} 💘`;
+                break;
+            case 'sparkle':
+                decorated = `✨ ${decorated} ✨`;
+                break;
+            case 'faith':
+                decorated = `🙏 ${decorated} 🙏`;
+                break;
+        }
+        
+        return decorated;
+    }
+
+    // ========== CREATE REACTIONS ==========
+    function createReactions(theme) {
+        elements.reactions.innerHTML = '';
+        const reactions = themeReactions[theme];
+        
+        reactions.forEach(emoji => {
+            const button = document.createElement('button');
+            button.className = 'glass-card w-12 h-12 rounded-full text-xl hover:scale-125 transition-transform duration-300';
+            button.textContent = emoji;
+            button.onclick = () => {
+                button.classList.toggle('theme-active');
+            };
+            elements.reactions.appendChild(button);
+        });
+    }
+
+    // ========== SHARE FUNCTIONS ==========
+    function shareOnWhatsApp() {
+        const text = decoratedMessage;
+        const url = `https://wa.me/?text=${encodeURIComponent(text)}`;
+        window.open(url, '_blank');
+        
+        // Update share count
+        shareCount += Math.floor(Math.random() * 5) + 1;
+        elements.shareCountEl.textContent = shareCount.toLocaleString();
+        
+        // Show seen effect after delay
+        setTimeout(() => {
+            elements.seenEffect.classList.remove('hidden');
+            setTimeout(() => {
+                elements.seenEffect.classList.add('hidden');
+            }, 3000);
+        }, 2000);
+    }
+
+    function downloadAsImage() {
+        const bubble = document.querySelector('.whatsapp-bubble');
+        
+        html2canvas(bubble, {
+            backgroundColor: null,
+            scale: 2,
+            useCORS: true
+        }).then(canvas => {
+            const link = document.createElement('a');
+            link.download = `christmas-wish-${Date.now()}.png`;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        });
+    }
+
+    // ========== MUSIC CONTROL ==========
+    function changeMusic(theme) {
+        const musicSources = {
+            christmas: 'Romantic Piano',
+            heart: 'Soft Melody',
+            sparkle: 'Magical Bells',
+            faith: 'Heavenly Choir'
+        };
+        
+        elements.musicLabel.textContent = musicSources[theme];
+        elements.musicLabel.classList.remove('hidden');
+        
+        if (musicPlaying) {
+            elements.bgMusic.src = themeMusic[theme];
+            elements.bgMusic.play().catch(e => console.log("Music play prevented"));
+        }
+    }
+
+    // ========== EVENT LISTENERS ==========
+    elements.musicToggle.addEventListener('click', () => {
+        if (elements.bgMusic.paused) {
+            elements.bgMusic.play();
+            musicPlaying = true;
+            elements.musicToggle.innerHTML = '<i class="fas fa-volume-up text-electric-gold text-xl"></i>';
+            elements.musicToggle.classList.add('bg-deep-purple/50');
+            elements.musicLabel.classList.remove('hidden');
+        } else {
+            elements.bgMusic.pause();
+            musicPlaying = false;
+            elements.musicToggle.innerHTML = '<i class="fas fa-music text-electric-gold text-xl"></i>';
+            elements.musicToggle.classList.remove('bg-deep-purple/50');
+            elements.musicLabel.classList.add('hidden');
+        }
+    });
+
+    elements.scrollToGenerator.addEventListener('click', () => {
+        elements.generatorSection.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    elements.relationshipBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            elements.relationshipBtns.forEach(b => b.classList.remove('border-2', 'border-neon-red', 'bg-neon-red/10'));
+            btn.classList.add('border-2', 'border-neon-red', 'bg-neon-red/10');
+            elements.relationshipInput.value = btn.dataset.relation;
+        });
+    });
+
+    elements.themeBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            elements.themeBtns.forEach(b => b.classList.remove('theme-active'));
+            btn.classList.add('theme-active');
+            currentTheme = btn.dataset.theme;
+            elements.messageThemeInput.value = currentTheme;
+            changeMusic(currentTheme);
+        });
+    });
+
+    elements.generateBtn.addEventListener('click', () => {
+        const yourName = elements.yourNameInput.value.trim() || "Your Secret Admirer";
+        const lovedName = elements.lovedNameInput.value.trim() || "My Love";
+        
+        if (!lovedName) {
+            elements.lovedNameInput.focus();
+            elements.lovedNameInput.classList.add('animate-pulse');
+            setTimeout(() => elements.lovedNameInput.classList.remove('animate-pulse'), 1000);
+            return;
+        }
+
+        const templates = messageTemplates[currentTheme];
+        const template = templates[Math.floor(Math.random() * templates.length)];
+        
+        decoratedMessage = decorateMessage(template, yourName, lovedName, currentTheme);
+        currentMessage = decoratedMessage;
+        
+        // Show preview
+        elements.previewSection.classList.remove('hidden');
+        elements.shareSection.classList.remove('hidden');
+        elements.floatingWhatsApp.classList.remove('hidden');
+        
+        // Set time
+        elements.messageTime.textContent = getCurrentTime();
+        
+        // Create reactions
+        createReactions(currentTheme);
+        
+        // Typing animation
+        elements.previewContent.textContent = '';
+        elements.typingIndicator.classList.remove('hidden');
+        
+        setTimeout(() => {
+            elements.typingIndicator.classList.add('hidden');
+            elements.previewContent.textContent = decoratedMessage;
+            
+            // Scroll to preview
+            elements.previewSection.scrollIntoView({ behavior: 'smooth' });
+        }, 2000);
+        
+        // Update share count
+        shareCount += 1;
+        elements.shareCountEl.textContent = shareCount.toLocaleString();
+    });
+
+    elements.previewShareBtn.addEventListener('click', shareOnWhatsApp);
+    elements.downloadImageBtn.addEventListener('click', downloadAsImage);
+    elements.shareWhatsApp.addEventListener('click', shareOnWhatsApp);
+    elements.floatingWhatsApp.addEventListener('click', shareOnWhatsApp);
+
+    elements.shareFacebook.addEventListener('click', () => {
+        const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://christmaslovewish.com')}&quote=${encodeURIComponent('🎄 Create beautiful Christmas love wishes! ❤️')}`;
+        window.open(url, '_blank');
+    });
+
+    elements.copyLink.addEventListener('click', () => {
+        const link = 'https://christmaslovewish.com/create';
+        navigator.clipboard.writeText(link).then(() => {
+            const originalHTML = elements.copyLink.innerHTML;
+            elements.copyLink.innerHTML = '<i class="fas fa-check mr-2"></i> Copied!';
+            elements.copyLink.classList.add('bg-gradient-to-r', 'from-green-500', 'to-emerald');
+            setTimeout(() => {
+                elements.copyLink.innerHTML = originalHTML;
+                elements.copyLink.classList.remove('bg-gradient-to-r', 'from-green-500', 'to-emerald');
+            }, 2000);
+        });
+    });
+
+    // ========== INITIALIZATION ==========
+    function init() {
+        createSnow();
+        createHearts();
+        
+        // Auto-select first options
+        elements.relationshipBtns[0].click();
+        elements.themeBtns[0].click();
+        
+        // Initialize share count with random increment on load
+        shareCount += Math.floor(Math.random() * 50);
+        elements.shareCountEl.textContent = shareCount.toLocaleString();
+        
+        // Set initial music
+        elements.bgMusic.volume = 0.3;
+    }
+
+    // Start everything when page loads
+    document.addEventListener('DOMContentLoaded', init);
+
+    // Slow snow when message is being typed
+    document.addEventListener('visibilitychange', () => {
+        const snowflakes = document.querySelectorAll('.snowflake');
+        if (document.hidden) {
+            snowflakes.forEach(s => s.style.animationPlayState = 'paused');
+        } else {
+            snowflakes.forEach(s => s.style.animationPlayState = 'running');
+        }
+    });
+</script>
+</body>
+ </html>
