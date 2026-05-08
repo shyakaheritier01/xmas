@@ -1,572 +1,323 @@
-<!DOCTYPE html><html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Christmas Love Wish | Send Magical Xmas Wishes to Loved Ones</title> <meta name="description" content="Create and share beautiful, romantic, and funny Christmas love wishes for your girlfriend, boyfriend, wife, husband, or crush. Turn your feelings into a magical message."> <script src="https://cdn.tailwindcss.com"></script> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script> <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet"> <script> tailwind.config = { theme: { extend: { colors: { 'neon-red': '#ff2e63', 'emerald': '#0bda51', 'electric-gold': '#ffd700', 'deep-purple': '#7b2cbf', 'midnight': '#0f0c29', 'whatsapp-green': '#25D366', 'whatsapp-dark': '#075E54', }, fontFamily: { 'sans': ['Poppins', 'system-ui'], 'display': ['Playfair Display', 'serif'], 'whatsapp': ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'] }, animation: { 'float-slow': 'float 6s ease-in-out infinite', 'float-medium': 'float 4s ease-in-out infinite', 'pulse-glow': 'pulse-glow 2s ease-in-out infinite', 'fade-in': 'fadeIn 0.8s ease-out forwards', 'typewriter': 'typewriter 3s steps(40, end) 0.5s forwards', 'typing-dots': 'typing 1.5s infinite', 'heartbeat': 'heartbeat 1.2s ease-in-out infinite', 'seen-effect': 'seenEffect 2s ease-out forwards', 'pulse-strong': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite', }, keyframes: { float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-20px)' }, }, 'pulse-glow': { '0%, 100%': { opacity: 1, boxShadow: '0 0 20px #ff2e63' }, '50%': { opacity: 0.8, boxShadow: '0 0 40px #ff2e63' }, }, fadeIn: { from: { opacity: 0, transform: 'translateY(10px)' }, to: { opacity: 1, transform: 'translateY(0)' }, }, typewriter: { from: { width: '0' }, to: { width: '100%' }, }, typing: { '0%, 60%, 100%': { opacity: 0.4 }, '30%': { opacity: 1 }, }, heartbeat: { '0%, 100%': { transform: 'scale(1)' }, '50%': { transform: 'scale(1.1)' }, }, seenEffect: { '0%': { opacity: 0, transform: 'translateY(20px)' }, '100%': { opacity: 1, transform: 'translateY(0)' }, } }, backgroundImage: { 'christmas-gradient': 'linear-gradient(125deg, #0f0c29 0%, #7b2cbf 40%, #0bda51 80%, #ffd700 100%)', 'card-glass': 'linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)', 'heart-theme': 'radial-gradient(circle, rgba(255,46,99,0.1) 0%, transparent 70%)', 'sparkle-theme': 'radial-gradient(circle, rgba(255,215,0,0.1) 0%, transparent 70%)', 'faith-theme': 'radial-gradient(circle, rgba(123,44,191,0.1) 0%, transparent 70%)', } } } } </script> <style> body { overflow-x: hidden; font-family: 'Poppins', sans-serif; } .text-glow { text-shadow: 0 0 15px currentColor; } .glass-card { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.18); } .snowflake { position: absolute; background: white; border-radius: 50%; opacity: 0.8; filter: blur(0.5px); pointer-events: none; } .heart { position: absolute; color: #ff2e63; filter: drop-shadow(0 0 8px #ff2e63); z-index: 1; pointer-events: none; } .whatsapp-bubble { background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); border-radius: 24px 24px 4px 24px; position: relative; max-width: 85%; margin-left: auto; } .whatsapp-bubble::after { content: ''; position: absolute; bottom: 0; right: -8px; width: 20px; height: 20px; background: #25D366; clip-path: polygon(100% 0, 0 100%, 100% 100%); } .typing-indicator { display: inline-flex; align-items: center; gap: 4px; } .typing-dot { width: 8px; height: 8px; background: rgba(255, 255, 255, 0.7); border-radius: 50%; animation: typing 1.5s infinite; } .typing-dot:nth-child(2) { animation-delay: 0.2s; } .typing-dot:nth-child(3) { animation-delay: 0.4s; } @keyframes typing { 0%, 60%, 100% { opacity: 0.4; transform: translateY(0); } 30% { opacity: 1; transform: translateY(-5px); } } .theme-active { box-shadow: 0 0 0 3px currentColor, 0 0 20px currentColor; } #floatingWhatsApp { transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); z-index: 9999; } .share-count { background: linear-gradient(135deg, #ff2e63, #7b2cbf); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; } </style> </head> <body class="bg-midnight text-white font-sans min-h-screen relative overflow-x-hidden">
-	<!-- Animated Background Elements -->
-<div id="snowfall"></div>
-<div id="heartsContainer"></div>
-<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1512389142860-9c449e58a543?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80')] opacity-5 bg-cover bg-center bg-no-repeat"></div>
-<div class="absolute inset-0 bg-christmas-gradient opacity-30"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Brew Haven Coffee - Experience luxury coffee in Kigali, Rwanda. Premium handcrafted coffee, elegant atmosphere, and exceptional service.">
+  <title>Brew Haven Coffee | Premium Cafe Kigali</title>
+  <!-- Tailwind CSS + Google Fonts + Font Awesome CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+    .font-display {
+      font-family: 'Playfair Display', serif;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    /* custom premium styles */
+    .cinematic-overlay {
+      background: linear-gradient(135deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.7) 100%);
+    }
+    .glass-nav {
+      background: rgba(30, 20, 15, 0.75);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+      transition: all 0.3s ease;
+    }
+    .glass-nav.scrolled {
+      background: rgba(20, 12, 8, 0.92);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 5px 30px rgba(0,0,0,0.2);
+    }
+    .gold-glow {
+      text-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+    }
+    .card-premium {
+      transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    }
+    .card-premium:hover {
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 0 30px 40px -15px rgba(0,0,0,0.25);
+    }
+    .menu-card {
+      transition: all 0.3s ease;
+      background: rgba(255, 248, 235, 0.85);
+      backdrop-filter: blur(2px);
+    }
+    .menu-card:hover {
+      transform: translateY(-8px);
+      background: rgba(255, 248, 235, 0.98);
+      box-shadow: 0 20px 30px -12px rgba(88, 44, 21, 0.2);
+      border-left: 4px solid #d4af37;
+    }
+    .floating-slow {
+      animation: floatSlow 5s ease-in-out infinite;
+    }
+    @keyframes floatSlow {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    .gallery-img {
+      transition: all 0.5s;
+    }
+    .gallery-img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 25px 30px -12px rgba(0,0,0,0.4);
+    }
+    .section-reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease-out;
+    }
+    .section-reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .testimonial-card {
+      transition: all 0.3s;
+    }
+    .testimonial-card:hover {
+      transform: scale(1.02);
+      background: #ffffff;
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.15);
+    }
+    .reservation-glass {
+      background: rgba(255, 245, 235, 0.9);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+    input, select, textarea {
+      transition: all 0.2s;
+      background: rgba(255, 255, 245, 0.9);
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: #d4af37;
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+      outline: none;
+    }
+    .btn-gold {
+      background: linear-gradient(135deg, #c9a03d, #b8860b);
+      transition: all 0.25s;
+    }
+    .btn-gold:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 20px -8px rgba(184, 134, 11, 0.5);
+    }
+    .hamburger-active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger-active span:nth-child(2) { opacity: 0; }
+    .hamburger-active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+    .mobile-menu {
+      transition: max-height 0.35s ease, opacity 0.25s ease;
+    }
+    .bg-coffee-pattern {
+      background-image: radial-gradient(rgba(212, 175, 55, 0.08) 1px, transparent 1px);
+      background-size: 30px 30px;
+    }
+  </style>
+</head>
+<body class="bg-[#fef7e6] text-gray-800 overflow-x-hidden">
 
-<!-- Audio Player -->
-<div class="fixed top-4 right-4 z-50 flex items-center gap-2">
-    <button id="musicToggle" class="glass-card p-3 rounded-full hover:bg-deep-purple transition-all duration-300 hover:scale-110">
-        <i class="fas fa-music text-electric-gold text-xl"></i>
-    </button>
-    <div class="text-sm glass-card px-3 py-1 rounded-full hidden" id="musicLabel">Romantic Piano</div>
-    <audio id="bgMusic">
-        <source src="https://assets.mixkit.co/music/preview/mixkit-christmas-is-here-875.mp3" type="audio/mpeg">
-    </audio>
-</div>
-
-<!-- Floating WhatsApp Button -->
-<button id="floatingWhatsApp" class="fixed bottom-6 right-6 z-50 hidden bg-whatsapp-green hover:bg-whatsapp-dark text-white font-bold text-lg py-4 px-6 rounded-2xl transition-all duration-300 shadow-2xl hover:shadow-whatsapp-green/50 animate-pulse-strong flex items-center">
-    <i class="fab fa-whatsapp text-2xl mr-3"></i> Share on WhatsApp
-</button>
-
-<!-- Hero Section -->
-<section class="relative z-10 container mx-auto px-4 pt-16 md:pt-24 text-center">
-    <div class="max-w-4xl mx-auto">
-        <h1 class="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 animate-fade-in">
-            Send a <span class="text-neon-red text-glow">Magical Christmas Wish</span> <br class="hidden md:block"> to Someone You Love <span class="text-emerald">🎄❤️</span>
-        </h1>
-        <p class="text-xl md:text-2xl text-gray-200 mb-10 max-w-2xl mx-auto animate-fade-in" style="animation-delay: 0.2s;">
-            Turn your deepest feelings into a stunning, shareable Christmas message in seconds.
-        </p>
-        <div class="glass-card inline-block px-6 py-3 rounded-2xl mb-8">
-            <p class="text-lg"><span class="share-count font-bold" id="shareCount">1,243</span> Christmas wishes shared today</p>
-        </div>
-        <br>
-        <button id="scrollToGenerator" class="bg-neon-red hover:bg-deep-purple text-white font-bold text-xl md:text-2xl py-4 px-10 rounded-2xl transition-all duration-500 animate-pulse-glow shadow-2xl hover:shadow-purple-500/50 transform hover:-translate-y-2">
-            Create My Christmas Wish 💌
-        </button>
+  <!-- Sticky Navbar -->
+  <nav id="navbar" class="fixed w-full z-50 glass-nav transition-all duration-300">
+    <div class="container mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <i class="fas fa-mug-hot text-3xl text-amber-400"></i>
+        <span class="text-2xl font-display font-bold tracking-wide text-amber-100">Brew Haven</span>
+      </div>
+      <div class="hidden md:flex space-x-9 text-amber-50 font-medium">
+        <a href="#home" class="hover:text-amber-300 transition duration-200">Home</a>
+        <a href="#about" class="hover:text-amber-300 transition">About</a>
+        <a href="#menu" class="hover:text-amber-300 transition">Menu</a>
+        <a href="#gallery" class="hover:text-amber-300 transition">Gallery</a>
+        <a href="#offers" class="hover:text-amber-300 transition">Offers</a>
+        <a href="#contact" class="hover:text-amber-300 transition">Contact</a>
+      </div>
+      <div class="hidden md:block">
+        <a href="#reservation" class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-full font-semibold shadow-lg transition-all btn-gold">Book a Table</a>
+      </div>
+      <button id="menuBtn" class="md:hidden flex flex-col space-y-1.5 w-8 h-8 justify-center items-center">
+        <span class="block w-6 h-0.5 bg-amber-300 transition-all"></span>
+        <span class="block w-6 h-0.5 bg-amber-300 transition-all"></span>
+        <span class="block w-6 h-0.5 bg-amber-300 transition-all"></span>
+      </button>
     </div>
-</section>
-
-<!-- Wish Generator -->
-<section id="generator" class="relative z-10 container mx-auto px-4 py-16 md:py-24">
-    <div class="max-w-3xl mx-auto glass-card rounded-3xl p-6 md:p-10 shadow-2xl">
-        <h2 class="text-3xl md:text-4xl font-display font-bold text-center mb-2 text-electric-gold">✨ Your Wish Generator</h2>
-        <p class="text-center text-gray-300 mb-10">Fill in the details and let the magic happen.</p>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            <div>
-                <label class="block text-emerald mb-2 font-semibold"><i class="fas fa-user mr-2"></i>Your Name</label>
-                <input type="text" id="yourName" placeholder="e.g., Alex" class="w-full p-4 rounded-xl bg-gray-900/70 border border-emerald/50 focus:border-emerald focus:ring-2 focus:ring-emerald/30 outline-none transition">
-            </div>
-            <div>
-                <label class="block text-neon-red mb-2 font-semibold"><i class="fas fa-heart mr-2"></i>Loved One's Name</label>
-                <input type="text" id="lovedName" placeholder="e.g., Taylor" class="w-full p-4 rounded-xl bg-gray-900/70 border border-neon-red/50 focus:border-neon-red focus:ring-2 focus:ring-neon-red/30 outline-none transition">
-            </div>
-        </div>
-
-        <div class="mb-8">
-            <label class="block text-electric-gold mb-2 font-semibold"><i class="fas fa-users mr-2"></i>Relationship</label>
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-                <button class="relationship-btn glass-card p-4 rounded-xl text-center hover:scale-105 transition-all duration-300" data-relation="girlfriend">Girlfriend ❤️</button>
-                <button class="relationship-btn glass-card p-4 rounded-xl text-center hover:scale-105 transition-all duration-300" data-relation="boyfriend">Boyfriend 💙</button>
-                <button class="relationship-btn glass-card p-4 rounded-xl text-center hover:scale-105 transition-all duration-300" data-relation="wife">Wife 💍</button>
-                <button class="relationship-btn glass-card p-4 rounded-xl text-center hover:scale-105 transition-all duration-300" data-relation="husband">Husband 👑</button>
-                <button class="relationship-btn glass-card p-4 rounded-xl text-center hover:scale-105 transition-all duration-300" data-relation="crush">Crush 🫶</button>
-            </div>
-            <input type="hidden" id="relationship" value="">
-        </div>
-
-        <div class="mb-8">
-            <label class="block text-deep-purple mb-2 font-semibold"><i class="fas fa-palette mr-2"></i>Message Theme</label>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-                <button class="theme-btn glass-card p-4 rounded-xl text-center hover:scale-105 transition-all duration-300" data-theme="christmas">
-                    <div class="text-2xl mb-1">🎄</div>
-                    <div>Christmas</div>
-                </button>
-                <button class="theme-btn glass-card p-4 rounded-xl text-center hover:scale-105 transition-all duration-300" data-theme="heart">
-                    <div class="text-2xl mb-1 animate-heartbeat">❤️</div>
-                    <div>Heart</div>
-                </button>
-                <button class="theme-btn glass-card p-4 rounded-xl text-center hover:scale-105 transition-all duration-300" data-theme="sparkle">
-                    <div class="text-2xl mb-1">✨</div>
-                    <div>Sparkle</div>
-                </button>
-                <button class="theme-btn glass-card p-4 rounded-xl text-center hover:scale-105 transition-all duration-300" data-theme="faith">
-                    <div class="text-2xl mb-1">🙏</div>
-                    <div>Faith</div>
-                </button>
-            </div>
-            <input type="hidden" id="messageTheme" value="christmas">
-        </div>
-
-        <div class="text-center">
-            <button id="generateBtn" class="bg-gradient-to-r from-emerald to-electric-gold hover:from-electric-gold hover:to-emerald text-gray-900 font-black text-2xl py-5 px-12 rounded-2xl transition-all duration-500 shadow-2xl hover:shadow-emerald/50 transform hover:-translate-y-1 hover:scale-105">
-                Generate My Christmas Message 🎁
-            </button>
-        </div>
+    <div id="mobileMenu" class="md:hidden overflow-hidden max-h-0 opacity-0 invisible transition-all duration-300 bg-[#1f140e]/95 backdrop-blur-xl">
+      <div class="flex flex-col items-center space-y-5 py-7 text-amber-50 font-medium">
+        <a href="#home" class="hover:text-amber-300">Home</a><a href="#about" class="hover:text-amber-300">About</a><a href="#menu" class="hover:text-amber-300">Menu</a>
+        <a href="#gallery" class="hover:text-amber-300">Gallery</a><a href="#offers" class="hover:text-amber-300">Offers</a><a href="#contact" class="hover:text-amber-300">Contact</a>
+        <a href="#reservation" class="bg-amber-700 px-6 py-2 rounded-full">Reserve</a>
+      </div>
     </div>
-</section>
+  </nav>
 
-<!-- WhatsApp Message Preview -->
-<section id="whatsappPreview" class="relative z-10 container mx-auto px-4 pb-8 hidden">
-    <div class="max-w-2xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-display font-bold text-center mb-10 text-whatsapp-green">🔍 WhatsApp Message Preview</h2>
-        <div class="glass-card rounded-3xl p-6 md:p-8 shadow-2xl">
-            <div class="flex items-center gap-3 mb-4 p-3 bg-gray-900/50 rounded-2xl">
-                <div class="w-12 h-12 bg-whatsapp-green rounded-full flex items-center justify-center">
-                    <i class="fab fa-whatsapp text-2xl text-white"></i>
-                </div>
-                <div>
-                    <div class="font-bold">Christmas Love Wish</div>
-                    <div class="text-sm text-gray-300">Online • Just now</div>
-                </div>
-            </div>
-            
-            <div class="space-y-4 mb-6">
-                <div class="whatsapp-bubble p-5 text-white">
-                    <div id="previewContent" class="text-lg whitespace-pre-wrap"></div>
-                    <div class="flex justify-between items-center mt-3 pt-3 border-t border-white/20">
-                        <div class="text-sm opacity-80" id="messageTime">12:24 PM</div>
-                        <div class="flex items-center gap-1">
-                            <span class="text-lg">✓✓</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="typing-indicator glass-card p-4 rounded-2xl w-24" id="typingIndicator">
-                    <div class="typing-dot"></div>
-                    <div class="typing-dot"></div>
-                    <div class="typing-dot"></div>
-                </div>
-            </div>
-            
-            <div class="flex justify-center gap-2 mt-4" id="reactions">
-                <!-- Reactions will be added by JS -->
-            </div>
-            
-            <div class="text-center mt-8">
-                <p class="text-gray-400 text-sm mb-4">This is exactly how your message will appear on WhatsApp</p>
-                <button id="previewShareBtn" class="bg-whatsapp-green hover:bg-whatsapp-dark text-white font-bold text-lg py-3 px-8 rounded-2xl transition-all duration-300 hover:scale-105 mr-3">
-                    <i class="fab fa-whatsapp mr-2"></i> Share Now
-                </button>
-                <button id="downloadImageBtn" class="bg-gradient-to-r from-deep-purple to-purple-800 hover:from-purple-800 hover:to-deep-purple text-white font-bold text-lg py-3 px-8 rounded-2xl transition-all duration-300 hover:scale-105">
-                    <i class="fas fa-image mr-2"></i> Save as Image
-                </button>
-            </div>
+  <main>
+    <!-- HERO: Cinematic Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=1600'); background-size: cover;">
+      <div class="cinematic-overlay absolute inset-0"></div>
+      <div class="relative z-10 text-center px-6 max-w-4xl mx-auto floating-slow">
+        <span class="text-amber-300 tracking-widest text-lg uppercase font-semibold">Welcome to luxury coffee</span>
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white mt-4 leading-tight gold-glow">Experience Coffee <br>Like Never Before</h1>
+        <p class="text-amber-50/90 text-lg md:text-xl mt-6 max-w-2xl mx-auto">Artisan roasts, serene ambiance, and the perfect brew — crafted for connoisseurs in the heart of Kigali.</p>
+        <div class="flex flex-wrap gap-5 justify-center mt-10">
+          <a href="#reservation" class="bg-gradient-to-r from-amber-600 to-amber-700 text-white px-8 py-3 rounded-full font-semibold shadow-xl hover:shadow-2xl transition-all flex items-center gap-2"><i class="fas fa-calendar-alt"></i> Book a Table</a>
+          <a href="#menu" class="bg-transparent border-2 border-amber-400 text-amber-100 px-8 py-3 rounded-full font-semibold hover:bg-amber-800/30 transition-all"><i class="fas fa-coffee"></i> Explore Menu</a>
         </div>
-    </div>
-</section>
+      </div>
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"><i class="fas fa-chevron-down text-amber-300 text-2xl"></i></div>
+    </section>
 
-<!-- Seen Effect -->
-<div id="seenEffect" class="fixed inset-0 z-50 flex items-center justify-center pointer-events-none hidden">
-    <div class="glass-card p-8 rounded-3xl text-center max-w-md animate-seen-effect">
-        <div class="text-5xl mb-4">👀</div>
-        <h3 class="text-2xl font-bold text-neon-red mb-2">Your message has been viewed with love!</h3>
-        <p class="text-gray-300">Spread more joy by sharing again ❤️</p>
-    </div>
-</div>
-
-<!-- Share Section -->
-<section id="share" class="relative z-10 container mx-auto px-4 pb-24 hidden">
-    <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-3xl md:text-4xl font-display font-bold mb-4 text-neon-red">Share the Magic! 🚀</h2>
-        <p class="text-xl text-gray-300 mb-10">Make their Christmas unforgettable. Share your wish instantly.</p>
-        <div class="flex flex-wrap justify-center gap-6">
-            <button id="shareWhatsApp" class="bg-gradient-to-r from-whatsapp-green to-green-500 hover:from-green-500 hover:to-whatsapp-green text-white font-bold text-lg py-4 px-8 rounded-2xl transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-emerald/50 flex items-center">
-                <i class="fab fa-whatsapp text-2xl mr-3"></i> Share on WhatsApp
-            </button>
-            <button id="shareFacebook" class="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-800 hover:to-blue-600 text-white font-bold text-lg py-4 px-8 rounded-2xl transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-blue-500/50 flex items-center">
-                <i class="fab fa-facebook-f text-2xl mr-3"></i> Share on Facebook
-            </button>
-            <button id="copyLink" class="bg-gradient-to-r from-deep-purple to-purple-800 hover:from-purple-800 hover:to-deep-purple text-white font-bold text-lg py-4 px-8 rounded-2xl transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/50 flex items-center">
-                <i class="fas fa-link text-2xl mr-3"></i> Copy Wish Link
-            </button>
+    <!-- ABOUT SECTION + Stats -->
+    <section id="about" class="py-24 px-6 bg-coffee-pattern">
+      <div class="container mx-auto max-w-6xl">
+        <div class="grid md:grid-cols-2 gap-14 items-center">
+          <div class="order-2 md:order-1">
+            <span class="text-amber-700 font-semibold uppercase tracking-wider">Our story</span>
+            <h2 class="text-4xl md:text-5xl font-display font-bold text-gray-800 mt-3">The Art of <span class="text-amber-700">Slow Coffee</span></h2>
+            <p class="text-gray-700 mt-5 leading-relaxed">Founded with a passion for exceptional coffee and Rwandan warmth, Brew Haven is more than a café — a sanctuary for coffee lovers. We source the finest beans, roast locally, and craft every cup with artisanal precision.</p>
+            <p class="text-gray-600 mt-3">Our mission: deliver not just coffee, but a moment of luxury, connection, and inspiration.</p>
+          </div>
+          <div class="order-1 md:order-2 rounded-3xl overflow-hidden shadow-2xl"><img src="https://images.pexels.com/photos/3764640/pexels-photo-3764640.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Barista pouring coffee" class="w-full h-80 object-cover"></div>
         </div>
-        <div class="mt-12 glass-card rounded-2xl p-6 max-w-2xl mx-auto">
-            <h3 class="text-xl font-bold text-electric-gold mb-4">💡 Pro Tip for Maximum Impact</h3>
-            <p class="text-gray-300 text-left">1. <span class="text-emerald">Share as Image</span> for WhatsApp Status (reaches all contacts!)<br>
-            2. <span class="text-neon-red">Use the preview</span> to see exactly how it looks<br>
-            3. <span class="text-electric-gold">Add personal details</span> to make it more special</p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-16">
+          <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 text-center shadow-sm border border-amber-200"><i class="fas fa-smile-wink text-4xl text-amber-600 mb-3"></i><h3 class="text-4xl font-bold counter" data-target="5200">0</h3><p class="font-semibold">Happy Customers</p></div>
+          <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 text-center shadow-sm border border-amber-200"><i class="fas fa-mug-hot text-4xl text-amber-600 mb-3"></i><h3 class="text-4xl font-bold counter" data-target="18900">0</h3><p class="font-semibold">Coffee Served</p></div>
+          <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 text-center shadow-sm border border-amber-200"><i class="fas fa-calendar-alt text-4xl text-amber-600 mb-3"></i><h3 class="text-4xl font-bold counter" data-target="8">0</h3><p class="font-semibold">Years of Excellence</p></div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<footer class="relative z-10 text-center py-8 text-gray-500 text-sm border-t border-gray-800/50 mx-4">
-    <p>Made with <i class="fas fa-heart text-neon-red mx-1 animate-heartbeat"></i> for Christmas lovers everywhere. © 2023 Christmas Love Wish. All magic reserved.</p>
-</footer>
+    <!-- MENU SECTION (premium cards) -->
+    <section id="menu" class="py-24 bg-[#f9f1e2]">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="text-center mb-14"><span class="text-amber-700 font-semibold uppercase">Sip & Savor</span><h2 class="text-4xl md:text-5xl font-display font-bold">Signature Collection</h2></div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="menu-card rounded-2xl p-5 shadow-md border border-amber-100"><img src="https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=400" class="rounded-xl h-44 w-full object-cover mb-4" alt="Espresso"><h3 class="text-2xl font-bold">Espresso Romano</h3><p class="text-gray-600">Bold single-origin with lemon twist.</p><div class="flex justify-between items-center mt-3"><span class="text-amber-700 text-2xl font-bold">$4.5</span><i class="fas fa-heart text-amber-400"></i></div></div>
+          <div class="menu-card rounded-2xl p-5 shadow-md border border-amber-100"><img src="https://images.pexels.com/photos/414630/pexels-photo-414630.jpeg?auto=compress&cs=tinysrgb&w=400" class="rounded-xl h-44 w-full object-cover mb-4" alt="Cappuccino"><h3 class="text-2xl font-bold">Velvet Cappuccino</h3><p class="text-gray-600">Silky foam, double espresso, cocoa dusting.</p><div class="flex justify-between items-center mt-3"><span class="text-amber-700 text-2xl font-bold">$5.9</span><i class="fas fa-heart text-amber-400"></i></div></div>
+          <div class="menu-card rounded-2xl p-5 shadow-md border border-amber-100"><img src="https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=400" class="rounded-xl h-44 w-full object-cover mb-4" alt="Latte"><h3 class="text-2xl font-bold">Honey Lavender Latte</h3><p class="text-gray-600">Aromatic and soothing with oat milk.</p><div class="flex justify-between items-center mt-3"><span class="text-amber-700 text-2xl font-bold">$6.5</span><i class="fas fa-heart text-amber-400"></i></div></div>
+          <div class="menu-card rounded-2xl p-5 shadow-md border border-amber-100"><img src="https://images.pexels.com/photos/2253643/pexels-photo-2253643.jpeg?auto=compress&cs=tinysrgb&w=400" class="rounded-xl h-44 w-full object-cover mb-4" alt="Mocha"><h3 class="text-2xl font-bold">Dark Chocolate Mocha</h3><p class="text-gray-600">Rich cocoa & espresso, whipped cream.</p><div class="flex justify-between items-center mt-3"><span class="text-amber-700 text-2xl font-bold">$7.2</span><i class="fas fa-heart text-amber-400"></i></div></div>
+          <div class="menu-card rounded-2xl p-5 shadow-md border border-amber-100"><img src="https://images.pexels.com/photos/324028/pexels-photo-324028.jpeg?auto=compress&cs=tinysrgb&w=400" class="rounded-xl h-44 w-full object-cover mb-4" alt="Iced Coffee"><h3 class="text-2xl font-bold">Golden Iced Caramel</h3><p class="text-gray-600">Cold brew, salted caramel, vanilla bean.</p><div class="flex justify-between items-center mt-3"><span class="text-amber-700 text-2xl font-bold">$6.9</span><i class="fas fa-heart text-amber-400"></i></div></div>
+          <div class="menu-card rounded-2xl p-5 shadow-md border border-amber-100"><img src="https://images.pexels.com/photos/1005409/pexels-photo-1005409.jpeg?auto=compress&cs=tinysrgb&w=400" class="rounded-xl h-44 w-full object-cover mb-4" alt="Croissant"><h3 class="text-2xl font-bold">Butter Croissant</h3><p class="text-gray-600">Flaky, golden, served with artisanal jam.</p><div class="flex justify-between items-center mt-3"><span class="text-amber-700 text-2xl font-bold">$4.2</span><i class="fas fa-heart text-amber-400"></i></div></div>
+        </div>
+      </div>
+    </section>
 
-<script>
-    // ========== STATE VARIABLES ==========
-    let currentMessage = '';
-    let decoratedMessage = '';
-    let currentTheme = 'christmas';
-    let shareCount = 1243;
-    let currentTime = new Date();
-    let musicPlaying = false;
+    <!-- GALLERY SECTION : masonry style -->
+    <section id="gallery" class="py-24 bg-white">
+      <div class="container mx-auto px-6 max-w-7xl"><div class="text-center mb-12"><span class="text-amber-700 uppercase">Visual stories</span><h2 class="text-4xl md:text-5xl font-display font-bold">The Brew Haven Experience</h2></div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="gallery-img overflow-hidden rounded-2xl shadow-lg"><img src="https://images.pexels.com/photos/3764640/pexels-photo-3764640.jpeg?auto=compress&cs=tinysrgb&w=600" class="w-full h-64 object-cover transition-transform duration-500 hover:scale-105" alt="coffee art"></div>
+        <div class="gallery-img overflow-hidden rounded-2xl shadow-lg"><img src="https://images.pexels.com/photos/1695052/pexels-photo-1695052.jpeg?auto=compress&cs=tinysrgb&w=600" class="w-full h-64 object-cover transition-transform" alt="interior cafe"></div>
+        <div class="gallery-img overflow-hidden rounded-2xl shadow-lg"><img src="https://images.pexels.com/photos/1684150/pexels-photo-1684150.jpeg?auto=compress&cs=tinysrgb&w=600" class="w-full h-64 object-cover transition-transform" alt="desserts"></div>
+        <div class="gallery-img overflow-hidden rounded-2xl shadow-lg"><img src="https://images.pexels.com/photos/1556691/pexels-photo-1556691.jpeg?auto=compress&cs=tinysrgb&w=600" class="w-full h-64 object-cover transition-transform" alt="barista working"></div>
+        <div class="gallery-img overflow-hidden rounded-2xl shadow-lg"><img src="https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=600" class="w-full h-64 object-cover transition-transform" alt="coffee cup"></div>
+        <div class="gallery-img overflow-hidden rounded-2xl shadow-lg"><img src="https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=600" class="w-full h-64 object-cover transition-transform" alt="coffee beans"></div>
+      </div></div>
+    </section>
 
-    // ========== DOM ELEMENTS ==========
-    const elements = {
-        musicToggle: document.getElementById('musicToggle'),
-        bgMusic: document.getElementById('bgMusic'),
-        musicLabel: document.getElementById('musicLabel'),
-        scrollToGenerator: document.getElementById('scrollToGenerator'),
-        generatorSection: document.getElementById('generator'),
-        previewSection: document.getElementById('whatsappPreview'),
-        shareSection: document.getElementById('share'),
-        shareCountEl: document.getElementById('shareCount'),
-        relationshipBtns: document.querySelectorAll('.relationship-btn'),
-        themeBtns: document.querySelectorAll('.theme-btn'),
-        generateBtn: document.getElementById('generateBtn'),
-        previewContent: document.getElementById('previewContent'),
-        messageTime: document.getElementById('messageTime'),
-        typingIndicator: document.getElementById('typingIndicator'),
-        reactions: document.getElementById('reactions'),
-        previewShareBtn: document.getElementById('previewShareBtn'),
-        downloadImageBtn: document.getElementById('downloadImageBtn'),
-        shareWhatsApp: document.getElementById('shareWhatsApp'),
-        shareFacebook: document.getElementById('shareFacebook'),
-        copyLink: document.getElementById('copyLink'),
-        floatingWhatsApp: document.getElementById('floatingWhatsApp'),
-        seenEffect: document.getElementById('seenEffect'),
-        yourNameInput: document.getElementById('yourName'),
-        lovedNameInput: document.getElementById('lovedName'),
-        relationshipInput: document.getElementById('relationship'),
-        messageThemeInput: document.getElementById('messageTheme')
+    <!-- SPECIAL OFFERS SECTION -->
+    <section id="offers" class="py-24 bg-gradient-to-br from-amber-50 to-[#fff3e0]">
+      <div class="container mx-auto px-6 max-w-7xl"><div class="text-center mb-12"><span class="text-amber-800 font-bold">Exclusive perks</span><h2 class="text-4xl font-display font-bold">Limited Time Offers</h2></div>
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="bg-white rounded-2xl p-6 text-center shadow-xl border-l-8 border-amber-500"><i class="fas fa-gem text-4xl text-amber-500 mb-3"></i><h3 class="text-xl font-bold">Weekend Special</h3><p class="text-gray-600 mt-2">Free dessert with every latte (Sat-Sun)</p></div>
+        <div class="bg-white rounded-2xl p-6 text-center shadow-xl border-l-8 border-amber-500"><i class="fas fa-coffee text-4xl text-amber-500 mb-3"></i><h3 class="text-xl font-bold">Buy 1 Get 1</h3><p class="text-gray-600">Every Tuesday, any brewed coffee</p></div>
+        <div class="bg-white rounded-2xl p-6 text-center shadow-xl border-l-8 border-amber-500"><i class="fas fa-music text-4xl text-amber-500 mb-3"></i><h3 class="text-xl font-bold">Live Jazz Nights</h3><p class="text-gray-600">Friday 7PM – Free entry, special drinks</p></div>
+        <div class="bg-white rounded-2xl p-6 text-center shadow-xl border-l-8 border-amber-500"><i class="fas fa-wifi text-4xl text-amber-500 mb-3"></i><h3 class="text-xl font-bold">Work from Haven</h3><p class="text-gray-600">Free WiFi + 10% off for remote work</p></div>
+      </div></div>
+    </section>
+
+    <!-- RESERVATION SECTION (Luxury form) -->
+    <section id="reservation" class="py-24 relative bg-[url('https://images.pexels.com/photos/1684150/pexels-photo-1684150.jpeg?auto=compress&cs=tinysrgb&w=1200')] bg-cover bg-fixed">
+      <div class="absolute inset-0 bg-black/55"></div>
+      <div class="container mx-auto px-6 max-w-4xl relative z-10">
+        <div class="reservation-glass rounded-3xl p-8 md:p-12 shadow-2xl">
+          <div class="text-center mb-8"><h2 class="text-3xl md:text-4xl font-display font-bold text-amber-900">Reserve Your Table</h2><p class="text-gray-700">Experience luxury — book a seat for an unforgettable coffee journey.</p></div>
+          <form id="reserveForm" class="grid md:grid-cols-2 gap-6">
+            <input type="text" placeholder="Full name" class="rounded-xl px-5 py-3 border border-amber-200" required>
+            <input type="tel" placeholder="Phone number" class="rounded-xl px-5 py-3 border" required>
+            <input type="email" placeholder="Email address" class="rounded-xl px-5 py-3 border">
+            <input type="date" class="rounded-xl px-5 py-3 border">
+            <input type="time" class="rounded-xl px-5 py-3 border">
+            <select class="rounded-xl px-5 py-3 border"><option>1 Guest</option><option>2 Guests</option><option>3 Guests</option><option>4+ Guests</option></select>
+            <textarea rows="2" placeholder="Special request (occasion, allergies...)" class="md:col-span-2 rounded-xl px-5 py-3 border"></textarea>
+            <div class="md:col-span-2 flex justify-center"><button type="submit" class="btn-gold px-10 py-3 text-white font-bold rounded-full shadow-xl text-lg w-full md:w-auto"><i class="fas fa-check-circle"></i> Confirm Reservation</button></div>
+          </form>
+          <div id="reserveSuccess" class="hidden mt-5 text-center text-green-800 bg-green-100 p-3 rounded-xl">✨ Booking request sent! We’ll confirm shortly.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section id="testimonials" class="py-24 bg-[#fcf7f0]">
+      <div class="container mx-auto px-6 max-w-7xl"><div class="text-center"><span class="text-amber-700 uppercase">loved by guests</span><h2 class="text-4xl font-display font-bold">Customer Stories</h2></div>
+      <div class="grid md:grid-cols-3 gap-8 mt-14">
+        <div class="testimonial-card bg-white p-6 rounded-2xl shadow-md"><div class="flex items-center gap-4"><i class="fas fa-user-circle text-5xl text-amber-600"></i><div><h4 class="font-bold">Diane Uwase</h4><div class="text-amber-400 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div></div><p class="mt-4 italic">“The best cappuccino in Kigali! Elegant ambiance and the staff make you feel like royalty.”</p></div>
+        <div class="testimonial-card bg-white p-6 rounded-2xl shadow-md"><div class="flex items-center gap-4"><i class="fas fa-user-circle text-5xl text-amber-600"></i><div><h4 class="font-bold">Kevin Mugisha</h4><div class="text-amber-400"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div></div><p class="mt-4 italic">“Latte art perfection and a cozy workspace. My go-to spot for meetings. Highly recommend!”</p></div>
+        <div class="testimonial-card bg-white p-6 rounded-2xl shadow-md"><div class="flex items-center gap-4"><i class="fas fa-user-circle text-5xl text-amber-600"></i><div><h4 class="font-bold">Clarisse Imanzi</h4><div class="text-amber-400"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div></div><p class="mt-4 italic">“Luxury and warmth combined. The iced caramel is dreamy — I keep coming back!”</p></div>
+      </div></div>
+    </section>
+
+    <!-- CONTACT WITH MAP + WHATSAPP -->
+    <section id="contact" class="py-24 bg-coffee-pattern">
+      <div class="container mx-auto px-6 max-w-6xl"><div class="text-center mb-12"><h2 class="text-4xl font-display font-bold">Visit Haven</h2><p class="text-gray-700">In the heart of Kigali — your coffee sanctuary awaits.</p></div>
+      <div class="grid md:grid-cols-2 gap-12">
+        <div class="space-y-5 bg-white/60 p-6 rounded-3xl backdrop-blur-sm"><div class="flex gap-3"><i class="fas fa-map-marker-alt text-2xl text-amber-700"></i><span>KG 7 Ave, Kacyiru, Kigali - Rwanda</span></div><div><i class="fas fa-phone-alt text-amber-700"></i> +250 788 987 654</div><div><i class="fas fa-envelope text-amber-700"></i> hello@brewhaven.rw</div><div><i class="far fa-clock"></i> Mon-Sun: 7:00 AM – 10:00 PM</div><a href="https://wa.me/250788987654" target="_blank" class="inline-block bg-green-600 text-white px-6 py-3 rounded-full shadow-md hover:bg-green-700 transition"><i class="fab fa-whatsapp"></i> Order on WhatsApp</a><div class="flex gap-5 text-3xl mt-4"><i class="fab fa-instagram hover:text-amber-600"></i><i class="fab fa-facebook hover:text-amber-600"></i><i class="fab fa-twitter hover:text-amber-600"></i></div></div>
+        <div class="rounded-2xl overflow-hidden shadow-2xl"><iframe class="w-full h-72" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.475240071209!2d30.089531414254058!3d-1.944361398870013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca76e6e9a1b7b%3A0x2f7b3e3b8e2e2f9d!2sKigali%20Heights!5e0!3m2!1sen!2srw!4v1712134567890!5m2!1sen!2srw" style="border:0;" allowfullscreen></iframe></div>
+      </div></div>
+    </section>
+
+    <!-- FOOTER + NEWSLETTER -->
+    <footer class="bg-[#1c130d] text-amber-50 py-12">
+      <div class="container mx-auto px-6 max-w-7xl grid md:grid-cols-4 gap-8"><div><i class="fas fa-mug-hot text-3xl text-amber-400"></i><h3 class="text-2xl font-display mt-2">Brew Haven</h3><p class="text-amber-200/70 text-sm">Premium coffee culture.</p></div><div><h4 class="font-semibold mb-3">Quick Links</h4><ul class="space-y-1 text-amber-200/70"><li><a href="#home" class="hover:text-amber-300">Home</a></li><li><a href="#menu">Menu</a></li><li><a href="#offers">Offers</a></li></ul></div><div><h4 class="font-semibold mb-3">Newsletter</h4><div class="flex"><input type="email" placeholder="Your email" class="px-3 py-2 rounded-l-lg w-full text-black"><button class="bg-amber-600 px-4 rounded-r-lg">→</button></div></div><div><h4 class="font-semibold">© 2025 Brew Haven Coffee — Kigali, Rwanda</h4></div></div>
+    </footer>
+  </main>
+
+  <script>
+    // Navbar scroll, mobile toggle, counters & scroll animations
+    const navBar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { if (window.scrollY > 30) navBar.classList.add('scrolled'); else navBar.classList.remove('scrolled'); });
+
+    const menuToggle = document.getElementById('menuBtn');
+    const mobilePanel = document.getElementById('mobileMenu');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('hamburger-active');
+      if (mobilePanel.classList.contains('max-h-0')) {
+        mobilePanel.classList.remove('max-h-0', 'opacity-0', 'invisible');
+        mobilePanel.classList.add('max-h-96', 'opacity-100', 'visible');
+      } else {
+        mobilePanel.classList.add('max-h-0', 'opacity-0', 'invisible');
+        mobilePanel.classList.remove('max-h-96', 'opacity-100', 'visible');
+      }
+    });
+    document.querySelectorAll('#mobileMenu a').forEach(link => link.addEventListener('click', () => {
+      mobilePanel.classList.add('max-h-0', 'opacity-0', 'invisible');
+      menuToggle.classList.remove('hamburger-active');
+    }));
+
+    // Counters
+    const counterItems = document.querySelectorAll('.counter');
+    const startCount = () => {
+      counterItems.forEach(c => { const update = () => { const target = +c.dataset.target, cur = +c.innerText; const inc = target/50; if (cur < target) { c.innerText = Math.ceil(cur + inc); setTimeout(update, 18); } else c.innerText = target; }; update(); });
     };
+    const aboutObserver = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) { startCount(); aboutObserver.unobserve(e.target); } }); }, { threshold: 0.4 });
+    const statsSection = document.querySelector('#about .grid');
+    if (statsSection) aboutObserver.observe(statsSection);
 
-    // ========== MESSAGE TEMPLATES WITH THEME SUPPORT ==========
-    const messageTemplates = {
-        christmas: [
-            "🎄✨ *MERRY CHRISTMAS MY LOVE* ✨🎄\n\n❤️ My beautiful {lovedName} ❤️\nThis Christmas, I thank God for you.\nYou are my warmth in every cold season.\n\n🎁 From: {yourName}\n🔗 Create yours: https://christmaslovewish.netlify.app",
-            "🎅❤️ *CHRISTMAS BLESSINGS* ❤️🎅\n\nMy dear {lovedName},\nMay this Christmas fill our hearts with joy,\nAnd our home with love and laughter.\nYou are my greatest gift.\n\n🎄 With love, {yourName}\n✨ Spread love: https://christmaslovewish.netlify.app/"
-        ],
-        heart: [
-            "❤️✨ *FROM MY HEART TO YOURS* ✨❤️\n\nMy dearest {lovedName},\nEvery beat of my heart whispers your name.\nThis Christmas, I give you my forever love.\n\n💝 Yours always, {yourName}\n🔗 Share love: https://christmaslovewish.netlify.app",
-            "💖🎄 *ALL MY LOVE THIS CHRISTMAS* 🎄💖\n\nTo {lovedName}, my everything\nMy love for you grows stronger each day\nLike an evergreen tree, forever green\n\n❤️ Forever yours, {yourName}\n🌟 Create yours: https://christmaslovewish.netlify.app/"
-        ],
-        sparkle: [
-            "✨🎄 *SHINING JUST FOR YOU* 🎄✨\n\n{lov edName}, you light up my world\nBrighter than any Christmas star\nThis season and always, you're my magic\n\n🌟 With sparkles, {yourName}\n💫 Make magic: https://christmaslovewish.netlify.app",
-            "⭐❤️ *YOUR LIGHT IN MY LIFE* ❤️⭐\n\nMy shining star {lovedName},\nYou make every day sparkle with joy\nMerry Christmas to my favorite person\n\n✨ Love, {yourName}\n🎇 Share sparkle: https://christmaslovewish.netlify.app/"
-        ],
-        faith: [
-            "🙏🎄 *GOD'S CHRISTMAS BLESSING* 🎄🙏\n\n{lov edName}, my blessed gift from above\nMay the peace of Christ fill your heart\nAnd our love reflect His eternal light\n\n✝️ In His love, {yourName}\n🕊️ Bless others: https://christmaslovewish.netlify.app",
-            "✝️❤️ *CHRIST-CENTERED CHRISTMAS* ❤️✝️\n\nMy beloved {lovedName},\nAs we celebrate Jesus' birth\nI celebrate the gift of you\nGod's perfect present to me\n\n🙏 Gratefully, {yourName}\n🌟 Share faith: https://christmaslovewish.netlify.app/"
-        ]
-    };
-    // ========== EMOJI REACTIONS BY THEME ==========
-    const themeReactions = {
-        christmas: ['🎄', '❤️', '✨', '🎁', '⛄'],
-        heart: ['❤️', '💖', '💝', '💘', '🫶'],
-        sparkle: ['✨', '🌟', '⭐', '💫', '🎇'],
-        faith: ['🙏', '✝️', '🕊️', '🌟', '❤️']
-    };
+    // Reveal sections
+    const revealSections = document.querySelectorAll('section');
+    const revealOnScroll = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('revealed'); }); }, { threshold: 0.2 });
+    revealSections.forEach(s => { s.classList.add('section-reveal'); revealOnScroll.observe(s); });
+    document.getElementById('home').classList.add('revealed');
 
-    // ========== MUSIC BY THEME ==========
-    const themeMusic = {
-        christmas: 'https://assets.mixkit.co/music/preview/mixkit-christmas-is-here-875.mp3',
-        heart: 'https://assets.mixkit.co/music/preview/mixkit-romantic-snow-535.mp3',
-        sparkle: 'https://assets.mixkit.co/music/preview/mixkit-fairy-dust-sound-3054.mp3',
-        faith: 'https://assets.mixkit.co/music/preview/mixkit-snowy-christmas-2370.mp3'
-    };
-
-    // ========== BACKGROUND ANIMATIONS ==========
-    function createSnow() {
-        const snowfall = document.getElementById('snowfall');
-        const snowCount = window.innerWidth < 768 ? 40 : 80;
-        
-        for (let i = 0; i < snowCount; i++) {
-            const snowflake = document.createElement('div');
-            snowflake.classList.add('snowflake');
-            const size = Math.random() * 5 + 3;
-            snowflake.style.width = `${size}px`;
-            snowflake.style.height = `${size}px`;
-            snowflake.style.left = `${Math.random() * 100}vw`;
-            snowflake.style.top = `-10px`;
-            snowflake.style.opacity = `${Math.random() * 0.7 + 0.3}`;
-            snowfall.appendChild(snowflake);
-            
-            // Animate each snowflake individually
-            animateSnowflake(snowflake);
-        }
-    }
-
-    function animateSnowflake(element) {
-        const duration = Math.random() * 10 + 10;
-        const horizontalDrift = Math.random() * 100 - 50;
-        
-        element.animate([
-            { transform: `translate(0, 0)`, opacity: element.style.opacity },
-            { transform: `translate(${horizontalDrift}px, 100vh)`, opacity: 0 }
-        ], {
-            duration: duration * 1000,
-            easing: 'linear',
-            iterations: Infinity,
-            delay: Math.random() * 5000
-        });
-    }
-
-    function createHearts() {
-        const container = document.getElementById('heartsContainer');
-        for (let i = 0; i < 15; i++) {
-            const heart = document.createElement('div');
-            heart.classList.add('heart');
-            heart.innerHTML = '❤️';
-            heart.style.fontSize = `${Math.random() * 20 + 15}px`;
-            heart.style.left = `${Math.random() * 100}vw`;
-            heart.style.top = `${Math.random() * 100}vh`;
-            container.appendChild(heart);
-            
-            // Float animation
-            heart.animate([
-                { transform: 'translateY(0)' },
-                { transform: 'translateY(-30px)' },
-                { transform: 'translateY(0)' }
-            ], {
-                duration: Math.random() * 6000 + 4000,
-                iterations: Infinity,
-                easing: 'ease-in-out',
-                delay: Math.random() * 2000
-            });
-        }
-    }
-
-    // ========== TIME FORMATTING ==========
-    function getCurrentTime() {
-        const now = new Date();
-        return now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-    }
-
-    // ========== DECORATE MESSAGE ==========
-    function decorateMessage(template, yourName, lovedName, theme) {
-        let decorated = template
-            .replace(/{yourName}/g, yourName)
-            .replace(/{lovedName}/g, lovedName);
-            
-        // Add theme-specific decorations
-        switch(theme) {
-            case 'heart':
-                decorated = `💘 ${decorated} 💘`;
-                break;
-            case 'sparkle':
-                decorated = `✨ ${decorated} ✨`;
-                break;
-            case 'faith':
-                decorated = `🙏 ${decorated} 🙏`;
-                break;
-        }
-        
-        return decorated;
-    }
-
-    // ========== CREATE REACTIONS ==========
-    function createReactions(theme) {
-        elements.reactions.innerHTML = '';
-        const reactions = themeReactions[theme];
-        
-        reactions.forEach(emoji => {
-            const button = document.createElement('button');
-            button.className = 'glass-card w-12 h-12 rounded-full text-xl hover:scale-125 transition-transform duration-300';
-            button.textContent = emoji;
-            button.onclick = () => {
-                button.classList.toggle('theme-active');
-            };
-            elements.reactions.appendChild(button);
-        });
-    }
-
-    // ========== SHARE FUNCTIONS ==========
-    function shareOnWhatsApp() {
-        const text = decoratedMessage;
-        const url = `https://wa.me/?text=${encodeURIComponent(text)}`;
-        window.open(url, '_blank');
-        
-        // Update share count
-        shareCount += Math.floor(Math.random() * 5) + 1;
-        elements.shareCountEl.textContent = shareCount.toLocaleString();
-        
-        // Show seen effect after delay
-        setTimeout(() => {
-            elements.seenEffect.classList.remove('hidden');
-            setTimeout(() => {
-                elements.seenEffect.classList.add('hidden');
-            }, 3000);
-        }, 2000);
-    }
-
-    function downloadAsImage() {
-        const bubble = document.querySelector('.whatsapp-bubble');
-        
-        html2canvas(bubble, {
-            backgroundColor: null,
-            scale: 2,
-            useCORS: true
-        }).then(canvas => {
-            const link = document.createElement('a');
-            link.download = `christmas-wish-${Date.now()}.png`;
-            link.href = canvas.toDataURL('image/png');
-            link.click();
-        });
-    }
-
-    // ========== MUSIC CONTROL ==========
-    function changeMusic(theme) {
-        const musicSources = {
-            christmas: 'Romantic Piano',
-            heart: 'Soft Melody',
-            sparkle: 'Magical Bells',
-            faith: 'Heavenly Choir'
-        };
-        
-        elements.musicLabel.textContent = musicSources[theme];
-        elements.musicLabel.classList.remove('hidden');
-        
-        if (musicPlaying) {
-            elements.bgMusic.src = themeMusic[theme];
-            elements.bgMusic.play().catch(e => console.log("Music play prevented"));
-        }
-    }
-
-    // ========== EVENT LISTENERS ==========
-    elements.musicToggle.addEventListener('click', () => {
-        if (elements.bgMusic.paused) {
-            elements.bgMusic.play();
-            musicPlaying = true;
-            elements.musicToggle.innerHTML = '<i class="fas fa-volume-up text-electric-gold text-xl"></i>';
-            elements.musicToggle.classList.add('bg-deep-purple/50');
-            elements.musicLabel.classList.remove('hidden');
-        } else {
-            elements.bgMusic.pause();
-            musicPlaying = false;
-            elements.musicToggle.innerHTML = '<i class="fas fa-music text-electric-gold text-xl"></i>';
-            elements.musicToggle.classList.remove('bg-deep-purple/50');
-            elements.musicLabel.classList.add('hidden');
-        }
-    });
-
-    elements.scrollToGenerator.addEventListener('click', () => {
-        elements.generatorSection.scrollIntoView({ behavior: 'smooth' });
-    });
-
-    elements.relationshipBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            elements.relationshipBtns.forEach(b => b.classList.remove('border-2', 'border-neon-red', 'bg-neon-red/10'));
-            btn.classList.add('border-2', 'border-neon-red', 'bg-neon-red/10');
-            elements.relationshipInput.value = btn.dataset.relation;
-        });
-    });
-
-    elements.themeBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            elements.themeBtns.forEach(b => b.classList.remove('theme-active'));
-            btn.classList.add('theme-active');
-            currentTheme = btn.dataset.theme;
-            elements.messageThemeInput.value = currentTheme;
-            changeMusic(currentTheme);
-        });
-    });
-
-    elements.generateBtn.addEventListener('click', () => {
-        const yourName = elements.yourNameInput.value.trim() || "Your Secret Admirer";
-        const lovedName = elements.lovedNameInput.value.trim() || "My Love";
-        
-        if (!lovedName) {
-            elements.lovedNameInput.focus();
-            elements.lovedNameInput.classList.add('animate-pulse');
-            setTimeout(() => elements.lovedNameInput.classList.remove('animate-pulse'), 1000);
-            return;
-        }
-
-        const templates = messageTemplates[currentTheme];
-        const template = templates[Math.floor(Math.random() * templates.length)];
-        
-        decoratedMessage = decorateMessage(template, yourName, lovedName, currentTheme);
-        currentMessage = decoratedMessage;
-        
-        // Show preview
-        elements.previewSection.classList.remove('hidden');
-        elements.shareSection.classList.remove('hidden');
-        elements.floatingWhatsApp.classList.remove('hidden');
-        
-        // Set time
-        elements.messageTime.textContent = getCurrentTime();
-        
-        // Create reactions
-        createReactions(currentTheme);
-        
-        // Typing animation
-        elements.previewContent.textContent = '';
-        elements.typingIndicator.classList.remove('hidden');
-        
-        setTimeout(() => {
-            elements.typingIndicator.classList.add('hidden');
-            elements.previewContent.textContent = decoratedMessage;
-            
-            // Scroll to preview
-            elements.previewSection.scrollIntoView({ behavior: 'smooth' });
-        }, 2000);
-        
-        // Update share count
-        shareCount += 1;
-        elements.shareCountEl.textContent = shareCount.toLocaleString();
-    });
-
-    elements.previewShareBtn.addEventListener('click', shareOnWhatsApp);
-    elements.downloadImageBtn.addEventListener('click', downloadAsImage);
-    elements.shareWhatsApp.addEventListener('click', shareOnWhatsApp);
-    elements.floatingWhatsApp.addEventListener('click', shareOnWhatsApp);
-
-    elements.shareFacebook.addEventListener('click', () => {
-        const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://christmaslovewish.netlify.app/')}&quote=${encodeURIComponent('🎄 Create beautiful Christmas love wishes! ❤️')}`;
-        window.open(url, '_blank');
-    });
-
-    elements.copyLink.addEventListener('click', () => {
-        const link = 'https://christmaslovewish.netlify.app';
-        navigator.clipboard.writeText(link).then(() => {
-            const originalHTML = elements.copyLink.innerHTML;
-            elements.copyLink.innerHTML = '<i class="fas fa-check mr-2"></i> Copied!';
-            elements.copyLink.classList.add('bg-gradient-to-r', 'from-green-500', 'to-emerald');
-            setTimeout(() => {
-                elements.copyLink.innerHTML = originalHTML;
-                elements.copyLink.classList.remove('bg-gradient-to-r', 'from-green-500', 'to-emerald');
-            }, 2000);
-        });
-    });
-
-    // ========== INITIALIZATION ==========
-    function init() {
-        createSnow();
-        createHearts();
-        
-        // Auto-select first options
-        elements.relationshipBtns[0].click();
-        elements.themeBtns[0].click();
-        
-        // Initialize share count with random increment on load
-        shareCount += Math.floor(Math.random() * 50);
-        elements.shareCountEl.textContent = shareCount.toLocaleString();
-        
-        // Set initial music
-        elements.bgMusic.volume = 0.3;
-    }
-
-    // Start everything when page loads
-    document.addEventListener('DOMContentLoaded', init);
-
-    // Slow snow when message is being typed
-    document.addEventListener('visibilitychange', () => {
-        const snowflakes = document.querySelectorAll('.snowflake');
-        if (document.hidden) {
-            snowflakes.forEach(s => s.style.animationPlayState = 'paused');
-        } else {
-            snowflakes.forEach(s => s.style.animationPlayState = 'running');
-        }
-    });
-</script>
-	<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TKBZ040667"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-TKBZ040667');
-</script>
+    // reservation form
+    const reserveForm = document.getElementById('reserveForm');
+    const reserveMsg = document.getElementById('reserveSuccess');
+    reserveForm.addEventListener('submit', (e) => { e.preventDefault(); reserveMsg.classList.remove('hidden'); reserveForm.reset(); setTimeout(() => reserveMsg.classList.add('hidden'), 4000); });
+  </script>
 </body>
- </html>
-
-
-
+</html>
